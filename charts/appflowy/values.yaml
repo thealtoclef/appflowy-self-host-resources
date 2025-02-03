@@ -101,6 +101,10 @@ global:
         databaseUrl:
           # -- Database url, as inferred from the postgres credentials. Takes the form of: postgres://<appflowy user>:<password>@<host>:<port>/<database name>
           key: appflowyDatabaseUrl
+      ai:
+        databaseUrl:
+          # -- Database url, as inferred from the postgres credentials. Takes the form of: postgresql+psycopg://<appflowy user>:<password>@<host>:<port>/<database name>
+          key: aiDatabaseUrl
     gotrue:
       adminPassword:
         # -- Secret key name for the Gotrue admin password
@@ -198,6 +202,11 @@ appflowy-cloud:
 appflowy-web:
   enabled: true
   fullnameOverride: appflowy-web
+  ingress:
+    enabled: true
+
+appflowy-ai:
+  fullnameOverride: appflowy-ai
   ingress:
     enabled: true
 
